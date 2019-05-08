@@ -34,7 +34,7 @@
                     <p>Cursei Engenharia de Produção até o último periodo descobri que não era o que queria, desde então me intruduzir no mundo de desenvolvimento, 
                     ja cursei Analise e Desenvolvimento de Sistemas e depois de muitas idas e vindas me achei no EAD e agora vou até o fim.</p>
                     <p>Entre muitos altos e baixos da vida, acabei trabalhando de professor de informatica e atualmente sou cobrador de onibus, sei que tenho muito potencial e estou em busca de progredir.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="curriculo.php" class="btn btn-primary">Visualizar Curriculo</a>
                 </div>
                 <div class="card-footer text-muted">
                     07-maio-2019
