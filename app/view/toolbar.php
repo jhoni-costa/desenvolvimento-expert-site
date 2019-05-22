@@ -42,7 +42,7 @@
         </a>
         </span>
         <span class="navbar-text">
-        <a class="navbar-brand" href="login.php">
+        <a class="navbar-brand" href="app/view/login.php">
             Entrar
         </a>
         </span>

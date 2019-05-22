@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS usuario (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+    senha VARCHAR (255) NOT NULL,
+    hierarquia VARCHAR (255) NOT NULL,
+    data_registro TIMESTAMP,
+    data_atualizacao TIMESTAMP
+);
