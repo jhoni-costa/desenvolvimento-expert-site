@@ -16,7 +16,7 @@
     <body>
         <div class="container">
 
-        <?php include 'view/toolbar.php' ?>
+         <?php include 'app/view/toolbar.php' ?>
 
         <div class="card border-info text-center">
                 <div class="center card-header">

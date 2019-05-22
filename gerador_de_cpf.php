@@ -17,7 +17,7 @@
     <body>
         <div class="container">
 
-        <?php include 'view/toolbar.php' ?>
+         <?php include 'app/view/toolbar.php' ?>
 
             <div class="alert alert-info" role="alert">
                 Site em Desenvolvimento! 
