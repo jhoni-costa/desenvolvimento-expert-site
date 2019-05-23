@@ -7,7 +7,7 @@
         public function verificaLogin(){
           $email = $_POST['email'];
           $senha = $_POST['senha'];
-            var_dump($_POST);
+           
           $dao = new UsuarioDAO();
 
           $usuario = $dao->validaUsuario($email, $senha);

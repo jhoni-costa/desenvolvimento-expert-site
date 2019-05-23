@@ -11,7 +11,7 @@ class MySQLiHelper{
 
     public function conectaMySql(){
 
-        $this->servidor = "localhost:3306";
+        $this->servidor = "localhost";
         $this->usuario = "root";
         $this->senha = "";
         $this->banco = "devexpert";
