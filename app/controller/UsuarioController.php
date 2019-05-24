@@ -17,7 +17,7 @@
               header("Location:../view/login.php?key=$key");
           }else{
               $_SESSION['user'] = $this->serializaUsuario($usuario);
-             header("Location:../view/");
+             header("Location:../adm/");
           }
         }
         

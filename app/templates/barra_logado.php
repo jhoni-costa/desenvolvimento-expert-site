@@ -23,7 +23,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.php">Sobre</a>
+            <a class="nav-link" href="../adm/nova-postagem.php">Criar Postagens</a>
         </li>
         </ul>
         <span class="navbar-text">
@@ -42,7 +42,7 @@
         </a>
         </span>
         <span class="navbar-text">
-        <a class="navbar-brand" href='logout.php?token=<?=md5(session_id())?>'>
+        <a class="navbar-brand" href='../view/logout.php?token=<?=md5(session_id())?>'>
             Sair
         </a>
         </span>

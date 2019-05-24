@@ -3,7 +3,7 @@
     <head>
     
         <meta charset="UTF-8">
-
+        <title>Bem vindo ao Desenvolvimento Expert</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
