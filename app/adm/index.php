@@ -2,6 +2,7 @@
 <html>
 <head>
     <?php require_once '../controller/UsuarioController.php';
+          require_once '../controller/PostagemController.php';
     
     session_start();
     if(!isset ($_SESSION['user']) == true){
@@ -9,7 +10,11 @@
         header('Location:../view/login.php');
     }
     $controller = new UsuarioController();
+    $postController = new PostagemController();
+    
     $usuario = $controller->deserializaUsuario($_SESSION['user']);
+    
+    $listaPostagens = $postController->listar();
     ?>
 
     <meta charset="UTF-8">
@@ -24,41 +29,28 @@
 
 <body>
     <div class="container">
-        <?php
-            if(isset($_GET['key'])){
-                $key = $_GET['key'];
-                if($key == md5("postado_com_sucesso!")){ ?>
-
-                <div id="meuModal" class="modal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title">Postagem Realizada com Sucesso!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <script>$(document).ready(function(){
-                        $('#meuModal').modal('show');
-                    })
-                </script>
-
-                <?php }else if($key == md5("cadastrado-com-sucesso-no-sistema")){
-                echo "<div class='alert alert-success' role='alert'>
-                            <strong>Cadastrado com sucesso!</strong>
-                        </div>";
-                }
-            }
-        ?>
+        <?php include '../templates/modal-confirma-postagem.php' ?>
         <?php include '../templates/barra_logado.php' ?>
         <div class="alert alert-info" role="alert">
             Site em Desenvolvimento! 
+        </div>
+        
+        <h4>Postagens</h4>
+        <br>
+        <div class="list-group">
+        <?php 
+            foreach($listaPostagens as &$postagem){ ?>
+            
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"><?=$postagem->getTitulo()?></h5>
+                  <small><?=$postagem->getRegDate()?></small>
+                </div>
+                <p class="mb-1"><?=$postagem->getTexto()?></p>
+                <small>Ainda não sei o que por hahaha.</small>
+              </a>
+                
+        <?php } ?>
         </div>
     </div>
 </body>

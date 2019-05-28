@@ -7,6 +7,7 @@ class Postagem{
     private $caminhoFoto;
     private $texto;
     private $idUsuario;
+    private $regDate;
 
     function __construct(string $titulo, string $caminhoFoto, string $texto, $idUsuario){
         $this->titulo = $titulo;
@@ -52,5 +53,13 @@ class Postagem{
 
     public function getIdUsuario(){
         return $this->idUsuario;
+    }
+    
+    public function setRegDate($regDate){
+        $this->regDate = $regDate;
+    }
+    
+    public function getRegDate(){
+        return $this->regDate;
     }
 }

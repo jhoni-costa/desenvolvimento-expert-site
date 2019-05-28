@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS postagem(
 	id INT auto_increment primary key,
     titulo varchar(255) not null,
     caminho_foto varchar(255) not null,
-    texto varchar(255) not null,
+    texto text not null,
     id_usuario int not null,
     reg_date timestamp);
     

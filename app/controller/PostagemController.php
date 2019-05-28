@@ -17,4 +17,11 @@ class PostagemController{
         $key = md5("postado_com_sucesso!");
         header("Location:../adm/index.php?key=$key");
     }
+    
+    public function listar(){
+        
+        $dao = new PostagemDAO();
+        $lista = $dao->listar();
+        return $lista;
+    }
 }
